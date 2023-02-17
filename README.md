@@ -5,7 +5,7 @@
 This is the repository of 'Golden Retriever' for AIKU team Project! Golden Retriever is the service that search most similar images given user text query. I think all of you've suffered searching images on your labtop or phone. Golden Retriever can pick up the images fast and correctly like this, Woof!
 
 ## Architecture
-TBA
+First, place your own images at folder. And then, (1) generate the caption of images to train the model that can align with images well. In this stage, you'll have image-caption pairs and (2) finetune the text-to-image retrieval model with pairs. Finally, (3) if you put a description of the images you want to search into the trained model, you will get the images you want!
 
 ## Collaborators
 [@sylee0520](https://github.com/sylee0520) [@ONground-Korea](https://github.com/ONground-Korea) [@subin9](https://github.com/subin9) [@JeonSeongHu](https://github.com/JeonSeongHu) [@
