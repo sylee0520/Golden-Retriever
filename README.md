@@ -1,4 +1,5 @@
 # 🦮 Golden Retriever
+## About
 <p align="center">
   <img src="https://user-images.githubusercontent.com/72010172/219724337-78234040-2f25-4620-86dd-e48e86963ebc.gif">
 </p><br>
