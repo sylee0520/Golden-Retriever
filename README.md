@@ -8,5 +8,4 @@ This is the repository of 'Golden Retriever' for AIKU team Project! Golden Retri
 TBA
 
 ## Contributors
-
-@sylee0520
+![@sylee0520](https://github.com/sylee0520)
