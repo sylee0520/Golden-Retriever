@@ -11,13 +11,19 @@ First, place your own images at folder. And then, (1) generate the caption of im
 
 ## Usage
 If you want to train or inference the golden-retriever with your own images, please follow the next steps.
-### 0. Create the Conda Environment.
+### 0. Set the conda environment.
 ```bash
+# create conda env
 conda create -n gr python=3.8
+
+# activate conda env
 conda activate gr
 ```
 ### 1. Clone the BLIP repository.
-Our framework is based on BLIP model. BLIP is the Pretrained Visual-Language Model. Please refer official repository or paper for more details.
+Our framework is based on BLIP model. BLIP is the Pretrained Visual-Language Model. Please refer official [repository](https://github.com/salesforce/BLIP) or [paper](https://arxiv.org/abs/2201.12086) for more details.
+```bash
+git clone https://github.com/salesforce/BLIP.git
+```
 
 ## Collaborators
 [@sylee0520](https://github.com/sylee0520) [@ONground-Korea](https://github.com/ONground-Korea) [@subin9](https://github.com/subin9) [@JeonSeongHu](https://github.com/JeonSeongHu) [@
