@@ -23,6 +23,9 @@ Our framework is based on BLIP model. BLIP is the Pretrained Visual-Language Mod
 ```bash
 git clone https://github.com/salesforce/BLIP.git
 ```
+And place your own images in the `images` directory.
+
+### 1. 
 
 ## Collaborators
 [@sylee0520](https://github.com/sylee0520) [@ONground-Korea](https://github.com/ONground-Korea) [@subin9](https://github.com/subin9) [@JeonSeongHu](https://github.com/JeonSeongHu) [@
