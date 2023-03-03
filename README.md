@@ -61,6 +61,16 @@ def create_dataset(dataset, config, min_scale=0.5):
     ...
     
 ```
+Train the 🦮 retriever!
+```bash
+cd BLIP
+
+python -m torch.distributed.run --nproc_per_node=2 train_retrieval.py \
+--config ./configs/retrieval_gr.yaml \
+--output_dir output/gr_retrieval
+```
+### 3. Test your 🦮 retriever!
+Code will be updated soon!
 
 ## Collaborators
 [@sylee0520](https://github.com/sylee0520) [@ONground-Korea](https://github.com/ONground-Korea) [@subin9](https://github.com/subin9) [@JeonSeongHu](https://github.com/JeonSeongHu) [@
