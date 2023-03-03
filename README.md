@@ -37,9 +37,30 @@ CUDA_VISIBLE_DEVICES=0 python caption.py \
 `output_path` means output directory.
 
 ### 2. Training the retriever
-BLIP model basically supports the text-to-image and/or image-to-text retrieval only on `COCO`, `flickr30k`. Please add and modify some files for retrieving on custom datasets.
+BLIP model basically supports the text-to-image and/or image-to-text retrieval only on `COCO`, `flickr30k`. Please add some files for retrieving on custom datasets.
+```bash
+# 1. Place the 'gr_config.yaml' to BLIP/configs
+mv gr_config.yaml BLIP/configs/gr_config.yaml
 
+# 2. Place the 'gr_dataset.py' to BLIP/data
+mv gr_dataset.py BLIP/data/gr_dataset.py
+```
+Modify the BLIP/data/__init__.py file.
+```bash
+from data.gr_dataset import gr_train, gr_retrieval_eval
 
+def create_dataset(dataset, config, min_scale=0.5):
+        
+    ...
+    
+    elif dataset=='retrieval_gr':          
+        train_dataset = gr_train(transform_train, config['image_root'], config['ann_root'])
+        val_dataset = gr_retrieval_eval(transform_test, config['image_root'], config['ann_root'], 'val') 
+        test_dataset = gr_retrieval_eval(transform_test, config['image_root'], config['ann_root'], 'test')          
+        return train_dataset, val_dataset, test_dataset   
+    ...
+    
+```
 
 ## Collaborators
 [@sylee0520](https://github.com/sylee0520) [@ONground-Korea](https://github.com/ONground-Korea) [@subin9](https://github.com/subin9) [@JeonSeongHu](https://github.com/JeonSeongHu) [@
