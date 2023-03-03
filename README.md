@@ -45,7 +45,7 @@ mv gr_config.yaml BLIP/configs/gr_config.yaml
 # 2. Place the 'gr_dataset.py' to BLIP/data
 mv gr_dataset.py BLIP/data/gr_dataset.py
 ```
-Modify the BLIP/data/__init__.py file.
+Modify the BLIP/data/\_\_init\_\_.py file.
 ```bash
 from data.gr_dataset import gr_train, gr_retrieval_eval
 
