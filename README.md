@@ -75,8 +75,7 @@ class gr_retrieval_eval(Dataset):
 ```
 
 ## Demo
-We also propose demo code. Please download our model checkpoint, pre-extracted image embeddings and images for testing our demo! <br>
-Please replace the path in `gradio_demo.py` like below code.
+We also propose demo code. Please download our model checkpoint, pre-extracted image embeddings and images. And replace the path in `gradio_demo.py` like below code.
 ```bash
 
     ...
