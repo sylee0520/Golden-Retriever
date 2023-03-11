@@ -61,6 +61,32 @@ def create_dataset(dataset, config, min_scale=0.5):
     ...
     
 ```
+Modify the BLIP/data/gr_dataset.py file.
+```bash
+class gr_train(Dataset):
+    def __init__(self, transform, image_root, ann_root, max_words=30, prompt=''):        
+        '''
+        image_root (string): Root directory of images (e.g. flickr30k/)
+        ann_root (string): directory to store the annotation file
+        '''        
+        
+        with open(..., 'r') as f: # caption file path
+        
+        ...
+
+class gr_retrieval_eval(Dataset):
+    def __init__(self, transform, image_root, ann_root, split, max_words=30):  
+        '''
+        image_root (string): Root directory of images (e.g. flickr30k/)
+        ann_root (string): directory to store the annotation file
+        split (string): val or test
+        '''
+        
+        with open(..., 'r') as f: # caption file path
+        
+        ...
+ 
+```
 Train the 🦮 retriever!
 ```bash
 cd BLIP
