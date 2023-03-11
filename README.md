@@ -19,7 +19,10 @@ Our framework is based on BLIP model. BLIP is the Pretrained Visual-Language Mod
 ```bash
 git clone https://github.com/salesforce/BLIP.git
 ```
-And place your own images in the `images` directory. <br>
+And place your own images in the `images` directory.
+```bash
+mkdir images
+```
 BLIP model basically supports the text-to-image and/or image-to-text retrieval only on `COCO`, `flickr30k`. Please add some files for retrieving on custom datasets.
 ```bash
 # 1. Place the 'gr_config.yaml' to BLIP/configs
