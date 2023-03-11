@@ -75,6 +75,23 @@ class gr_retrieval_eval(Dataset):
 ```
 
 ## Demo
+We also propose demo code. Please download our model checkpoint, pre-extracted image embeddings and images for testing our demo! <br>
+Please replace the path in `gradio_demo.py` like below code.
+```bash
+
+    ...
+
+def get_image(text):    
+    image_embeds = np.load(...) # pre-extracted embeddings path
+    image_embeds = torch.from_numpy(image_embeds).to(torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+    text=translation.main(text)
+    distributed = True
+    image_path = ... # image path
+    config = yaml.load(open(..., 'r'), Loader=yaml.Loader) # gr_config.yaml path
+    
+    ...
+    
+```
 
 ## Usage
 If you want to train or inference the golden-retriever with your own images, please follow the next steps.
