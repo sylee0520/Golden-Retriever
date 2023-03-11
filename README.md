@@ -24,19 +24,6 @@ Our framework is based on BLIP model. BLIP is the Pretrained Visual-Language Mod
 git clone https://github.com/salesforce/BLIP.git
 ```
 And place your own images in the `images` directory.
-
-### 1. Captioning
-```bash
-CUDA_VISIBLE_DEVICES=0 python caption.py \
---sample True \
---image_path {your image directory} \
---output_path {output directory}
-```
-`sample` means whether you use the nucleus sampling or beam search when captioning.
-`image_path` means directory containing images that you want to caption.
-`output_path` means output directory.
-
-### 2. Training the retriever
 BLIP model basically supports the text-to-image and/or image-to-text retrieval only on `COCO`, `flickr30k`. Please add some files for retrieving on custom datasets.
 ```bash
 # 1. Place the 'gr_config.yaml' to BLIP/configs
@@ -87,6 +74,20 @@ class gr_retrieval_eval(Dataset):
         ...
  
 ```
+
+### 1. Captioning
+```bash
+CUDA_VISIBLE_DEVICES=0 python caption.py \
+--sample True \
+--image_path {your image directory} \
+--output_path {output directory}
+```
+`sample` means whether you use the nucleus sampling or beam search when captioning.
+`image_path` means directory containing images that you want to caption.
+`output_path` means output directory.
+
+### 2. Training the retriever
+
 Train the 🦮 retriever!
 ```bash
 cd BLIP
