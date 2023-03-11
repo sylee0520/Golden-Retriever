@@ -30,6 +30,12 @@ mv gr_config.yaml BLIP/configs/gr_config.yaml
 
 # 2. Place the 'gr_dataset.py' to BLIP/data
 mv gr_dataset.py BLIP/data/gr_dataset.py
+
+# 3. Place the 'gradio_demo.py' to BLIP/
+mv gradio_demo.py BLIP/gradio_demo.py
+
+# 4. Place the 'translation.py' to BLIP/
+mv translation.py BLIP/translation.py
 ```
 Modify the BLIP/data/\_\_init\_\_.py file.
 ```bash
@@ -90,6 +96,11 @@ def get_image(text):
     
     ...
     
+```
+All the preparations are done! Now, let's find the images you want using Golden Retriever!
+```bash
+cd BLIP
+python gradio_demo.py
 ```
 
 ## Usage
