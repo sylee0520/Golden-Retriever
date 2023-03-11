@@ -7,11 +7,7 @@ This is the repository of 'Golden Retriever' for AIKU team Project! Golden Retri
 ## Architecture
 First, place your own images at folder. And then, (1) generate the caption of images to train the model that can align with images well. In this stage, you'll have image-caption pairs and (2) finetune the text-to-image retrieval model with pairs. Finally, (3) if you put a description of the images you want to search into the trained model, you will get the images you want!
 
-## Demo
-
-## Usage
-If you want to train or inference the golden-retriever with your own images, please follow the next steps.
-### 0. Basic Setting
+## Basic Setting
 ```bash
 # create conda env
 conda create -n gr python=3.8
@@ -23,7 +19,7 @@ Our framework is based on BLIP model. BLIP is the Pretrained Visual-Language Mod
 ```bash
 git clone https://github.com/salesforce/BLIP.git
 ```
-And place your own images in the `images` directory.
+And place your own images in the `images` directory. <br>
 BLIP model basically supports the text-to-image and/or image-to-text retrieval only on `COCO`, `flickr30k`. Please add some files for retrieving on custom datasets.
 ```bash
 # 1. Place the 'gr_config.yaml' to BLIP/configs
@@ -74,6 +70,11 @@ class gr_retrieval_eval(Dataset):
         ...
  
 ```
+
+## Demo
+
+## Usage
+If you want to train or inference the golden-retriever with your own images, please follow the next steps.
 
 ### 1. Captioning
 ```bash
