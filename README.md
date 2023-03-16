@@ -136,3 +136,6 @@ KorBrodStat](https://github.com/KorBrodStat)
 
 ## Contact
 If you have any questions, please contact me! ```sy-lee@korea.ac.kr```
+
+## Acknowledge
+본 프로젝트는 Naver D2 제공 서버로 운영되고 있습니다.
